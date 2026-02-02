@@ -29,14 +29,16 @@ public class ques02{
             totalSum+=arr[i];
         }
         int leftSum =0;
+        int count=0;
         for (int i=0; i<n; i++){
             int rightSum = totalSum - leftSum -arr[i];
             if (leftSum == rightSum){
-                System.out.println("Pivot index is: ");
-                System.out.println(i);
-                return;
+                // System.out.println("Pivot index is: ");
+                // System.out.println(i);
+                count+=1;
             }
             leftSum+=arr[i];
         }
+       System.out.println("Number of pivot index is "+count);
     }
 }
